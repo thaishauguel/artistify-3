@@ -1,0 +1,23 @@
+<h1>Sign up form</h1>
+
+<form method="post" action="/auth/signup" class="form" enctype="multipart/form-data">
+
+    {{!-- {{> flashMessage }} --}}
+    <label for="userName">User Name</label>
+    <input type="text" id="userName" name="userName" value="juan">
+    <label for="email">email</label>
+    <input class="input" type="email" id="email" name="email" value="test@email.com">
+    <label for="password">password</label>
+    <input class="input" type="password" id="password" name="password" value="12345">
+    <label for="role">Role</label>
+    <select name="role" id="role">
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+    </select>
+    <label for="avatar">Choose your avatar</label>
+    <input type="file" id="avatar" name="avatar">
+    <button>Signup</button>
+</form>
+<p>
+    Already got an account ? <a href="/auth/signin">signin</a>
+</p>

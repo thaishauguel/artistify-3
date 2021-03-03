@@ -36,6 +36,7 @@
       <a href="/artist" class="link">artists</a> |
       <a href="/album" class="link">albums</a> |
       <a href="/dashboard" class="link"><i class="fa fa-user fa-1x"></i></a>
+
     </nav>
   </header>
 
@@ -46,9 +47,26 @@
       <i class="fa fa-search"></i>
     </button>
   </form> --}}
+<nav id="nav-main">
+  <a href="/">home</a>
+  <span>|</span>
+  {{#unless currentUser}}
+  <a href="/auth/signup">signup</a>
+  <span>|</span>
+  <a href="/auth/signin">signin</a>
+  <span>|</span>
+  {{else}}
+  <a href="/profile">profile</a>
+  <span>|</span>
+  <a href="/auth/signout">signout</a>
+  {{/unless}}
+</nav>
+
 
   <main id="content-main">
     {{> flashMessage }}
+
+
 
     {{{body}}}
   </main>
